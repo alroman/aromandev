@@ -8,9 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
 
 import Header from "./header"
 import "./layout.css"
+
+const Footer = styled.footer`
+  text-align: center;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,11 +40,11 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <Footer>
           © {new Date().getFullYear()}
           {` `}
           <a href="https://www.aroman.dev">alfonso roman</a>
-        </footer>
+        </Footer>
       </div>
     </>
   )

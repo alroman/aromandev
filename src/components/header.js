@@ -5,7 +5,7 @@ import styled from "styled-components"
 import img from "../images/rlogo.png"
 
 const Container = styled.header`
-  margin-bottom: 1.45rem;
+  /*margin-bottom: 1.45rem;*/
 
   .logo {
     margin: 0 auto;

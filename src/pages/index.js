@@ -5,6 +5,9 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import kana from "../images/kana.png"
+import play from "../images/playlist_logo.png"
+import gmto from "../images/gmto.png"
+
 import Twitter from "../components/twitter"
 import LinkedIn from "../components/linkedin"
 import Github from "../components/github"
@@ -15,6 +18,7 @@ const Container = styled.div`
   text-align: center;
   img {
     height: 150px;
+    margin-bottom: 0;
   }
 
   color: #9fa5ad;
@@ -35,16 +39,28 @@ const Container = styled.div`
     font-weight: 200;
   }
 
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+      padding: 20px;
+    }
+  }
+
   .social-links {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     > a {
+      font-weight: 100;
       margin-bottom: 20px;
+      height: 30px;
     }
     > a {
-      display: flex;
+      display: inline;
       justify-content: center;
     }
   }
@@ -62,11 +78,20 @@ const Container = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="aroman.dev" />
+    <SEO title="Home" />
     <Container>
-      <img src={kana} alt='Site logo'/>
+      <img src={kana} alt='ローマン'/>
       <h1>Alfonso Roman</h1>
       <p className='devtag'>software developer</p>
+      <div className='projects'>
+        <div>
+          <img src={gmto} alt='GMTO' />
+        </div>
+        <div>
+          <img src={play} alt='Playlist' />
+        </div>
+      </div>
+      
       <div className='social-links'>
           <a href='https://www.linkedin.com/in/aroman-dev/'>
             <LinkedIn /> linkedin.com/in/aroman-dev
@@ -80,11 +105,8 @@ const IndexPage = () => (
         <a href='https://keybase.io/alroman'>
           <Keybase /> keybase.io/alroman
         </a>
-        
       </div>
     </Container>
-    
-
   </Layout>
 )
 
