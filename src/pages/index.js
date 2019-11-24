@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -11,8 +11,8 @@ import gmto from "../images/gmto.png"
 import Twitter from "../components/twitter"
 import LinkedIn from "../components/linkedin"
 import Github from "../components/github"
-import Insta from '../components/insta'
-import Keybase from '../components/keybase'
+import Insta from "../components/insta"
+import Keybase from "../components/keybase"
 
 const Container = styled.div`
   text-align: center;
@@ -25,6 +25,7 @@ const Container = styled.div`
 
   h1 {
     font-weight: 100;
+    margin-bottom: 8px;
   }
 
   .devtag {
@@ -39,6 +40,12 @@ const Container = styled.div`
     font-weight: 200;
   }
 
+  .intro {
+    font-weight: 100;
+    color: #fff;
+    /*font-size: 14px;*/
+  }
+
   .projects {
     display: flex;
     flex-direction: column;
@@ -47,6 +54,11 @@ const Container = styled.div`
     > div {
       padding: 20px;
     }
+
+    .gmto-logo {
+      height: 75px;
+    }
+    margin-bottom: 40px;
   }
 
   .social-links {
@@ -80,29 +92,32 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Container>
-      <img src={kana} alt='ローマン'/>
+      <img src={kana} alt="ローマン" />
       <h1>Alfonso Roman</h1>
-      <p className='devtag'>software developer</p>
-      <div className='projects'>
+      <p className="devtag">software developer</p>
+      <p className="intro">
+        i make cool apps. currently creating the next generation UI for the next
+        generation of extremely large telescopes at GMTO
+      </p>
+      <div className="projects">
         <div>
-          <img src={gmto} alt='GMTO' />
-        </div>
-        <div>
-          <img src={play} alt='Playlist' />
+          <a href="https://www.gmto.org/" alt="GMTO link">
+            <img className="gmto-logo" src={gmto} alt="GMTO" />
+          </a>
         </div>
       </div>
-      
-      <div className='social-links'>
-          <a href='https://www.linkedin.com/in/aroman-dev/'>
-            <LinkedIn /> linkedin.com/in/aroman-dev
-          </a>
-        <a href='https://github.com/alroman'>
-          <Github />github.com/alroman
+      <div className="social-links">
+        <a href="https://github.com/alroman">
+          <Github />
+          github.com/alroman
         </a>
-        <a href='https://instagram.com/alromanb'>
+        <a href="https://www.linkedin.com/in/aroman-dev/">
+          <LinkedIn /> linkedin.com/in/aroman-dev
+        </a>
+        <a href="https://instagram.com/alromanb">
           <Insta /> instagram.com/alromanb
         </a>
-        <a href='https://keybase.io/alroman'>
+        <a href="https://keybase.io/alroman">
           <Keybase /> keybase.io/alroman
         </a>
       </div>

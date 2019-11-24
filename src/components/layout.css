@@ -207,7 +207,7 @@ html {
 }
 body {
   color: #fff;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
