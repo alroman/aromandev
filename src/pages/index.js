@@ -37,11 +37,11 @@ const Container = styled.div`
     border-bottom: 4px solid #D11D32;
     border-right: 1px solid #D11D32;*/
 
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .intro {
-    font-weight: 100;
+    font-weight: 200;
     color: #fff;
     /*font-size: 14px;*/
   }
@@ -67,7 +67,7 @@ const Container = styled.div`
     align-items: center;
 
     > a {
-      font-weight: 100;
+      font-weight: 300;
       margin-bottom: 20px;
       height: 30px;
     }
