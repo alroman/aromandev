@@ -94,8 +94,8 @@ const IndexPage = () => (
       <h1>Alfonso Roman</h1>
       <p className="devtag">software developer</p>
       <p className="intro">
-        i make cool apps. currently creating the next generation UI for the next
-        generation of extremely large telescopes at GMTO
+        I make cool apps.  Currently creating the next generation UI for the next
+        generation of extremely large telescopes at GMTO.
       </p>
       <div className="projects">
         <div>
